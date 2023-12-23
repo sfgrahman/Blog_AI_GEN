@@ -1,11 +1,10 @@
 import os
 import streamlit as st
-from dotenv import load_dotenv
 from langchain.prompts import PromptTemplate, load_prompt
 from langchain.chains import SequentialChain, LLMChain
 from langchain.llms.openai import OpenAI
 
-load_dotenv()
+
 
 st.title("🦜🔗AI Blog writer Assistant")
 st.sidebar.title("Give Your OpenAI API Key")
