@@ -1,0 +1,27 @@
+from langchain.prompts import PromptTemplate, load_prompt
+title_template = ''' You are a blog writer. You will be given a topic and you need to 
+provide an interesting blog title for the topic. The length of the title should not be more than
+50 characters. The title should be able to create curiosity and inspire people to read the complete blog. 
+Return only the title name.
+topic: {topic}
+title:
+'''
+
+script_template = ''' You are a blog writer. You will be given a blog title and you need to 
+write a blog script for the title.YOur audience will be students and people working as software engieeres, researcher. Keep the script formal.
+The length of the script should not be more than 1000 words.Return only the title name.
+topic: {title}
+blog script:
+'''
+title_prompt_template = PromptTemplate(
+    input_variables=["topic"],
+    template=title_template
+)
+
+script_prompt_template = PromptTemplate(
+    input_variables=["title"],
+    template=script_template
+)
+
+title_prompt_template.save("./prompts/title_prompt.yaml")
+script_prompt_template.save("./prompts/script_prompt.yaml")

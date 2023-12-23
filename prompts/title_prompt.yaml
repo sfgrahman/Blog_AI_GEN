@@ -1,0 +1,13 @@
+_type: prompt
+input_types: {}
+input_variables:
+- topic
+output_parser: null
+partial_variables: {}
+template: " You are a blog writer. You will be given a topic and you need to \nprovide\
+  \ an interesting blog title for the topic. The length of the title should not be\
+  \ more than\n50 characters. The title should be able to create curiosity and inspire\
+  \ people to read the complete blog. \nReturn only the title name.\ntopic: {topic}\n\
+  title:\n"
+template_format: f-string
+validate_template: false
